@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Tour | Bus Diagnostic Suite</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="crt-overlay"></div>
+
+    <div id="driver-license" class="license-btn hidden" title="View Operator Profile">
+        <div class="license-text">
+            <span class="id-label">ID:</span> DRIVER'S LICENSE<br>
+            <span class="id-name">PROFILE</span>
+        </div>
+    </div>
+
+    <div id="landing-screen" class="screen active">
+        <div class="title-container">
+            <h1 class="glitch" data-text="TOUR MEMORY LANE">TOUR MEMORY LANE</h1>
+            <p>> EDUCATIONAL TOUR DIAGNOSTIC ARCHIVE_</p>
+            <button id="start-btn" class="action-btn blink-text">> OPEN ARCHIVES</button>
+        </div>
+    </div>
+
+    <div id="garage-screen" class="screen hidden">
+        <header>
+            <h1>[ SYSTEM DIAGNOSTIC BUS CHECK ]</h1>
+            <p id="system-status">STATUS: MEMORIES LOCKED. REPAIR BUS TO VIEW.</p>
+            <div class="progress-container">
+                <div id="progress-fill"></div>
+            </div>
+            <p id="status-text">INTEGRITY: 0% | PARTS REPAIRED: 0 / 7</p>
+        </header>
+
+        <main>
+            <div class="repair-hub">
+                <h2>> REBUILD TARGET: DJM FIELD TRIP BUS</h2>
+                
+                <div class="car-viewer">
+                    <div class="svg-container" id="car-container">
+                        <svg viewBox="0 0 54 22" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+                            <rect x="8" y="16" width="6" height="4" fill="#111" class="car-part bus-tire" id="tire-rear" />
+                            <rect x="38" y="16" width="6" height="4" fill="#111" class="car-part bus-tire" id="tire-front" />
+                            
+                            <rect x="2" y="2" width="48" height="14" fill="#2d3748" class="car-body" />
+                            
+                            <rect x="1" y="14" width="2" height="3" fill="#1a202c" />
+                            <rect x="49" y="14" width="3" height="3" fill="#1a202c" />
+
+                            <rect x="4" y="4" width="6" height="6" fill="#0f172a" class="car-part" />
+                            <rect x="12" y="4" width="6" height="6" fill="#0f172a" class="car-part" />
+                            <rect x="20" y="4" width="6" height="6" fill="#0f172a" class="car-part" />
+                            <rect x="28" y="4" width="6" height="6" fill="#0f172a" class="car-part" />
+                            <rect x="44" y="4" width="4" height="6" fill="#0f172a" class="car-part" />
+
+                            <rect x="36" y="4" width="6" height="13" fill="#1a202c" class="car-part" />
+                            <rect x="37" y="5" width="2" height="5" fill="#0f172a" />
+                            <rect x="40" y="5" width="2" height="5" fill="#0f172a" />
+
+                            <rect x="50" y="11" width="2" height="2" fill="#4a5568" class="car-part" id="headlight" />
+                            <rect x="2" y="11" width="2" height="2" fill="#4a5568" class="car-part" id="taillight" />
+
+                            <rect x="2" y="12" width="34" height="1" fill="#4a5568" class="bus-stripe" />
+                            <rect x="42" y="12" width="8" height="1" fill="#4a5568" class="bus-stripe" />
+                            
+                            <text x="25" y="10.5" class="djm-text hidden" id="djm-sign">DJM DORMITORY</text>
+                        </svg>
+
+                        <div class="line" id="line-0" style="top: 10%; left: 15%; width: 30px; border-bottom: 2px solid var(--text-neon);"><span>ENGINE</span></div>
+                        <div class="line" id="line-1" style="top: 25%; left: 35%; width: 20px; border-bottom: 2px solid var(--text-neon);"><span>TRANSMISSION</span></div>
+                        <div class="line" id="line-2" style="top: 15%; left: 75%; width: 30px; border-bottom: 2px solid var(--text-neon);"><span>SUSPENSION</span></div>
+                        <div class="line" id="line-3" style="top: 85%; left: 15%; width: 20px; border-top: 2px solid var(--text-neon);"><span>BRAKES</span></div>
+                        <div class="line" id="line-4" style="top: 50%; left: 5%; width: 30px; border-bottom: 2px solid var(--text-neon);"><span>EXHAUST</span></div>
+                        <div class="line" id="line-5" style="top: 10%; left: 85%; width: 20px; border-bottom: 2px solid var(--text-neon);"><span>BATTERY</span></div>
+                        <div class="line" id="line-6" style="top: 85%; left: 75%; width: 20px; border-top: 2px solid var(--text-neon);"><span>TIRES</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="parts-grid">
+                <div class="part-card broken" data-id="0"><h3>ENGINE</h3><span class="status">LOCKED</span></div>
+                <div class="part-card broken" data-id="1"><h3>TRANSMISSION</h3><span class="status">LOCKED</span></div>
+                <div class="part-card broken" data-id="2"><h3>SUSPENSION</h3><span class="status">LOCKED</span></div>
+                <div class="part-card broken" data-id="3"><h3>BRAKES</h3><span class="status">LOCKED</span></div>
+                <div class="part-card broken" data-id="4"><h3>EXHAUST</h3><span class="status">LOCKED</span></div>
+                <div class="part-card broken" data-id="5"><h3>BATTERY</h3><span class="status">LOCKED</span></div>
+                <div class="part-card broken" data-id="6"><h3>TIRES</h3><span class="status">LOCKED</span></div>
+            </div>
+
+            <div id="ignition-container" class="hidden">
+                <h2 class="blink-text" id="final-message">ALL MEMORIES UNLOCKED!</h2>
+                <button id="reboot-btn" class="action-btn">[ RESTART JOURNEY ]</button>
+            </div>
+        </main>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <span id="modal-title">DIAGNOSTIC TOOL</span>
+                <span class="close-btn" id="close-modal">[X]</span>
+            </div>
+            <div class="modal-body">
+                <p id="puzzle-instruction">ERROR: Parts have been wrecked. Select parts to fix it.</p>
+                
+                <div id="puzzle-area" class="puzzle-area">
+                    <div id="component-slot" class="empty-slot">[ EMPTY SLOT ]</div>
+                    <div id="options-tray" class="options-tray"></div>
+                </div>
+
+                <div id="story-reveal" class="story-reveal hidden">
+                    <div class="carousel-container">
+                        <button id="prev-btn" class="carousel-btn">&lt;</button>
+                        <img id="story-image" src="" alt="Tour Memory">
+                        <button id="next-btn" class="carousel-btn">&gt;</button>
+                    </div>
+                    <div id="image-counter" class="image-counter">1 / 1</div>
+
+                    <h3 id="story-title"></h3>
+                    <p id="story-text"></p>
+                </div>
+
+                <button id="repair-btn" class="action-btn" disabled>> INITIATE REPAIR</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio-modal" class="modal">
+        <div class="modal-box portfolio-box">
+            <div class="modal-header">
+                <span id="portfolio-title">OPERATOR LICENSE / PORTFOLIO</span>
+                <span class="close-btn" id="close-portfolio">[X]</span>
+            </div>
+            <div class="modal-body portfolio-body">
+                
+                <div class="profile-header">
+                    <img src="images/pxArt.png" alt="John Patrick Estacio" class="profile-pic">
+                    <div class="profile-info">
+                        <h2>[ JOHN PATRICK ESTACIO ]</h2>
+                        <p class="role">WEB DEVELOPER</p>
+                        <p class="status">STATUS: DO NOT DISTURB</p>
+                    </div>
+                </div>
+
+                <div class="profile-details">
+                    <h3>> CORE SKILLS</h3>
+                    <p>HTML, CSS, JavaScript, REACT, UI/UX Designer, Web Developer</p>
+                    
+                    <h3>> ABOUT ME</h3>
+                    <p>I am an IT student passionate about building interactive web experiences, fixing hardware, and solving complex technical puzzles. This diagnostic terminal is a log of my educational tour memories.</p>
+
+                    <h3>> COMM LINKS</h3>
+                    <ul class="social-links">
+                        <li><a href="https://github.com/Hakumenn" target="_blank">[ GITHUB ]</a></li>
+                        <li><a href="https://www.linkedin.com/in/john-patrick-estacio-ba7565324/" target="_blank">[ LINKEDIN ]</a></li>
+                        <li><a href="https://www.facebook.com/johnPatrickEstacio.me" target="_blank">[ Facebook ]</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
