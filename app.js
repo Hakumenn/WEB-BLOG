@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: "EXHAUST", correct: "Exhaust Pipes", options: ["Exhaust Pipes", "Cap", "Gas Oil"],
             storyTitle: "Fifth Day",
             storyText: "this day was the most memorable because of the free time and schedule we have, we went to tagaytay and visited the Peoples park and sky ranch.",
-            storyImages: ["storyimages/group pic tagaytay.jpg","storyimages/peoples park pics tagaytay.jpg", "storyimages/peoples park tagaytay.jpg", "storyimages/tagaytay.jpg"] 
+            storyImages: ["storyimages/group pic tagaytay.jpg", "storyimages/peoples park tagaytay.jpg", "storyimages/tagaytay.jpg"] 
         },
         5: { // BATTERY
             name: "BATTERY", correct: "12V cell Array", options: ["tires", "12V cell Array", "Light Bulb"],
